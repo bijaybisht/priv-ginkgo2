@@ -85,7 +85,8 @@ bash "gps" do
 
   code <<-EOC
 
-  cp /tmp/tools/misc/{gps,gps.common,gps-cache} /usr/local/bin
+  cp /tmp/tools/misc/{gps,gps-cache} /usr/local/bin
+  cp /tmp/tools/misc/{gps.conf,gps.cache.conf} /etc
   mkdir -p /var/cache/gps/.locks
   chgrp -R gps /var/cache/gps
   chmod -R g+w /var/cache/gps
