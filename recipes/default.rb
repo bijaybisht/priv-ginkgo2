@@ -22,7 +22,7 @@ end
 template "#{_home_}/.netrc" do
   source    "dot.netrc.erb"
   variables ({
-    :entries => [ node[:ginkgo2][:machine], node[:ginkgo2][:fqdn] ]
+    :entries => [ node[:ginkgo2][:machine], node[:ginkgo2][:fqdn], node[:ginkgo2][:mirror] ]
   })
   owner	_user_
 end
@@ -102,6 +102,7 @@ end
 
 sudo _user_ do
   user _user_
+  nopasswd true
 end
 
 #
