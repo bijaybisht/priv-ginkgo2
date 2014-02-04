@@ -22,7 +22,7 @@ end
 template "#{_home_}/.netrc" do
   source    "dot.netrc.erb"
   variables ({
-    :entries => [ node[:ginkgo2][:machine], node[:ginkgo2][:fqdn], node[:ginkgo2][:mirror] ]
+    :entries => [ node[:ginkgo2][:machine], node[:ginkgo2][:fqdn], node[:ginkgo2][:mirror], node[:ginkgo2][:ip] ]
   })
   owner	_user_
 end
